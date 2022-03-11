@@ -3,6 +3,7 @@ function compareTrue() {
   // seu código aqui
 }
 Iniciando meu projeto. 
+Nova alteração.
 
 // Desafio 2
 function calcArea() {
