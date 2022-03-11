@@ -50,9 +50,25 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arraNum) {
+  let respond = [];
+  for (numero in arraNum) {
+    if (arraNum[numero] % 3 === 0 && arraNum[numero] % 5 === 0) {
+      respond.push('fizzBuzz');
+    }
+    else if (arraNum[numero] % 5 === 0) {
+      respond.push('buzz');
+    }
+    else if (arraNum[numero] % 3 === 0) {
+      respond.push('fizz');
+    }
+    else {
+      respond.push('bug!');
+    }
+  } return respond;
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 
 // Desafio 9
 function encode() {
