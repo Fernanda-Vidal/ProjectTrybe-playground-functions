@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  }  else {
+  } else {
     return false;
   }
 }
@@ -30,9 +30,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrNumeros) {
+  let maior = arrNumeros[0];
+  for (numero in arrNumeros) {
+    if (maior < arrNumeros[numero]) {
+      maior = arrNumeros[numero];
+    }
+  } let qtdMaior = 0;
+  for (verMaior in arrNumeros) {
+    if (arrNumeros[verMaior] === maior) {
+      qtdMaior += 1;
+    }
+  } return qtdMaior;
 }
+
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
