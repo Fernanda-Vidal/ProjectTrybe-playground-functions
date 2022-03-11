@@ -2,8 +2,7 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true) {
     return true;
-  }
-  else {
+  }  else {
     return false;
   }
 }
@@ -25,8 +24,9 @@ function concatName(arrStrings) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsWins = wins * 3;
+  return pointsWins + ties;
 }
 
 // Desafio 6
