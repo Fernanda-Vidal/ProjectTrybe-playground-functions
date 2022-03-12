@@ -67,32 +67,38 @@ function fizzBuzz(arraNum) {
     }
   } return respond;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 
 // Desafio 9
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(tecnologias, nome) {
+  let catObjetos = [];
+  let techOrdenado = tecnologias.sort();
+   if (tecnologias.length != 0) {
+    for (let i = 0; i < techOrdenado.length; i += 1) {
+      catObjetos.push({ tech: techOrdenado[i], name: nome });
+    } return catObjetos;
+  } 
+     return "Vazio!";
+  }
 
-module.exports = {
-  calcArea,
-  catAndMouse,
-  compareTrue,
-  concatName,
-  decode,
-  encode,
-  fizzBuzz,
-  footballPoints,
-  highestCount,
-  splitSentence,
-  techList,
-};
+  module.exports = {
+    calcArea,
+    catAndMouse,
+    compareTrue,
+    concatName,
+    decode,
+    encode,
+    fizzBuzz,
+    footballPoints,
+    highestCount,
+    splitSentence,
+    techList,
+  };
