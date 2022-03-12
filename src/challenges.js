@@ -69,36 +69,82 @@ function fizzBuzz(arraNum) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(parametro) {
+  let word = [];
+  for (letra in parametro) {
+    if (parametro[letra] === 'a') {
+      word +=  1;
+    }
+    else if (parametro[letra] === 'e') {
+      word += 2;
+    }
+    else if (parametro[letra] === 'i') {
+      word += 3;
+    }
+    else if (parametro[letra] === 'o') {
+      word += 4;
+    }
+    else if (parametro[letra] === 'u') {
+      word += 5;
+    }
+    else if (parametro[letra] === ' ') {
+      word += ' ';
+    }
+    else {
+      word += (parametro[letra]);
+    }
+  } return word;
 }
 
-function decode() {
-  // seu código aqui
+function decode(parametro2) {
+  let word2 = [];
+  for (numero in parametro2) {
+    if (parametro2[numero] === '1') {
+      word2 +=  'a';
+    }
+    else if (parametro2[numero] === '2') {
+      word2 += 'e';
+    }
+    else if (parametro2[numero] === '3') {
+      word2 += 'i';
+    }
+    else if (parametro2[numero] === '4') {
+      word2 += 'o';
+    }
+    else if (parametro2[numero] === '5') {
+      word2 += 'u';
+    }
+    else if (parametro2[numero] === ' ') {
+      word2 += ' ';
+    }
+    else {
+      word2 += (parametro2[numero]);
+    }
+  } return word2;
 }
 
 // Desafio 10
 function techList(tecnologias, nome) {
   let catObjetos = [];
   let techOrdenado = tecnologias.sort();
-   if (tecnologias.length != 0) {
+  if (tecnologias.length != 0) {
     for (let i = 0; i < techOrdenado.length; i += 1) {
       catObjetos.push({ tech: techOrdenado[i], name: nome });
     } return catObjetos;
-  } 
-     return "Vazio!";
   }
+  return "Vazio!";
+}
 
-  module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
-    techList,
-  };
+module.exports = {
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
+  techList,
+};
