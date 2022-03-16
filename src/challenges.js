@@ -46,23 +46,23 @@ function highestCount(arrNumeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanceCat1 = 0;
-    let distanceCat2 = 0;
-    for (let i = cat1; i < mouse; i += 1) {
-      distanceCat1 += 1;
-    }
-    for (let i2 = cat2; i2 > mouse; i2 -= 1) {
-      distanceCat2 += 1;
-    } if (distanceCat1 < distanceCat2) {
-      return "cat1";
-    } else if (distanceCat1 > distanceCat2) {
-      return "cat2";
-    }
-    return "os gatos trombam e o rato foge"
+  function multiplica (a, b){
+    let distance = a - b;
+    if (distance < 0){
+      distance = distance * -1;
+      } return distance
   }
+  let distance1 = multiplica(mouse, cat1);
+  let distance2 = multiplica(cat2, mouse);
 
-  console.log(catAndMouse(0, 1, 2));
-
+  if (distance1 < distance2){
+    return "cat1";
+  }
+  else if (distance1 > distance2){
+    return "cat2";
+  }
+  return "os gatos trombam e o rato foge";  
+}
 
 // Desafio 8
 function fizzBuzz(arraNum) {
