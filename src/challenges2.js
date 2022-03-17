@@ -40,8 +40,18 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(recebeString) {
+  let bebida = recebeString;
+  let qtsBebidas = bebida.match(/\d+/g).map(Number);
+  let verifica = 0 ;
+
+  for(i in qtsBebidas){
+    verifica += qtsBebidas[i];
+    } 
+    if (verifica === 1){
+    return verifica + " copo de água";
+  } 
+  return verifica + " copos de água"
 }
 
 module.exports = {
