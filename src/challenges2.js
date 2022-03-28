@@ -1,4 +1,5 @@
 // Desafio 11
+// Esta função contador, eu encontrei na seguinte consulta: https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array
 function contador(element1, element2) {
   var result = 0;
   for (i = 0; i < element1.length; i += 1) {
@@ -24,6 +25,7 @@ function generatePhoneNumber(numeroTel) {
   return ('(' + numeroTel[0] + numeroTel[1] + ') ' + numeroTel[2] + numeroTel[3] + numeroTel[4] + numeroTel[5] + numeroTel[6] + '-' + numeroTel[7] + numeroTel[8] + numeroTel[9] + numeroTel[10]);
 }
 
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA > lineB + lineC || lineA < lineB - lineC) {
@@ -42,7 +44,7 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(recebeString) {
   let bebida = recebeString;
-  let qtsBebidas = bebida.match(/\d+/g).map(Number);
+  let qtsBebidas = bebida.match(/\d+/g).map(Number); //essa solução eu encontrei na seguinte consulta: https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
   let verifica = 0 ;
 
   for(i in qtsBebidas){

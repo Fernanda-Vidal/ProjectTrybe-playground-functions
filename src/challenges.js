@@ -83,6 +83,7 @@ function fizzBuzz(arraNum) {
   } return respond;
 }
 
+
 // Desafio 9
 function encode(parametro) {
   let word = [];
@@ -149,6 +150,7 @@ function techList(tecnologias, nome) {
   }
   return "Vazio!";
 }
+console.log(techList(['java','java'], 'fernanda'))
 
 module.exports = {
   calcArea,
