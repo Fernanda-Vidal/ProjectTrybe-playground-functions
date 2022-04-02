@@ -1,11 +1,19 @@
 // Desafio 11
-// Esta função contador, eu encontrei na seguinte consulta: https://stackoverflow.com/questions/37365512/count-the-number-of-times-a-same-value-appears-in-a-javascript-array
-function contador(element1, element2) {
-  var result = 0;
-  for (i = 0; i < element1.length; i += 1) {
-    if (element1[i] == element2) { result += 1 }
+function contador(arrayInteiros){
+  let repete = 0;
+  for (i in arrayInteiros){
+      for(i2 in arrayInteiros){
+          if(arrayInteiros[i] === arrayInteiros[i2]){
+              repete += 1;
+          }
+      }
+      if (repete > 2){
+      return repete
+      }
+      repete = 0;
   }
-  return result;
+
+      return repete;
 }
 
 function generatePhoneNumber(numeroTel) {
@@ -18,14 +26,15 @@ function generatePhoneNumber(numeroTel) {
     if (numeroTel[numero] < 0 || numeroTel[numero] > 9) {
       return "não é possível gerar um número de telefone com esses valores"
     }
-    else if (contador(numeroTel, numeroTel[numero]) >= 3) {
+    else if (contador(numeroTel) >= 3) {
       return "não é possível gerar um número de telefone com esses valores"
     }
   }
   return ('(' + numeroTel[0] + numeroTel[1] + ') ' + numeroTel[2] + numeroTel[3] + numeroTel[4] + numeroTel[5] + numeroTel[6] + '-' + numeroTel[7] + numeroTel[8] + numeroTel[9] + numeroTel[10]);
 }
 
-console.log(generatePhoneNumber([0, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
+console.log(generatePhoneNumber([0, 2, 3, 4, 5, 6, 7, 7, 7, 0, 1]));
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if (lineA > lineB + lineC || lineA < lineB - lineC) {
